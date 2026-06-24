@@ -489,6 +489,7 @@ def test_invalid_gas_g2msm(
 
     If any of the calls succeeds, the test will fail.
     """
+    # TODO Glib: debug
     print(f"!!!!!!! tx.gasLimit={tx.gas_limit}")
     print(f"!!!!!!! tx={tx}")
     state_test(
