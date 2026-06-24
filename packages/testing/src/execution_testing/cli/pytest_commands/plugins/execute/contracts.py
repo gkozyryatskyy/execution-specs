@@ -125,7 +125,9 @@ def deploy_deterministic_factory_contract(
             f"limit of {deploy_tx_gas_limit}"
         )
 
-    required_deployer_balance = deploy_tx_gas_price * deploy_tx_gas_limit
+    # TODO Glib: Hedera needs more fees
+    # required_deployer_balance = deploy_tx_gas_price * deploy_tx_gas_limit
+    required_deployer_balance = 1_000_000_000_000_000_000
     current_balance = eth_rpc.get_balance(deploy_tx_sender)
     if current_balance < required_deployer_balance:
         # Add transaction to fund the deployer.
